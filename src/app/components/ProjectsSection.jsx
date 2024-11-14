@@ -67,7 +67,7 @@ const projectsData = [
     description: "Lokkit_web is a dynamic web application designed to manage and organize various business services. Built using modern web technologies, this project demonstrates a seamless user experience with real-time data handling and interactive UI components.",
     image: "/images/projects/7.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Tamamkarim/Lokkit-website-main",
     previewUrl: "/",
   },
 ];
