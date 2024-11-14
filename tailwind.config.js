@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors'); // Add this line to import colors
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
@@ -16,10 +16,11 @@ module.exports = {
       },
     },
     colors: {
-      ...colors, // Use the imported colors here
-      primary: colors.purple,
-      secondary: colors.pink,
+      ...colors, // دمج مكتبة الألوان الافتراضية
+      primary: colors.sky, // يمكن استخدام "sky" بدلاً من "lightBlue"
+      secondary: colors.stone, // يمكن استخدام "stone" بدلاً من "warmGray"
     },
   },
   plugins: [],
 };
+
