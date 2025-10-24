@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "../contexts/ThemeContext";
 
 const variants = {
   default: { width: 0 },
@@ -7,11 +8,17 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const { isDarkMode } = useTheme();
+  
+  const buttonClasses = active 
+    ? (isDarkMode ? "text-white" : "text-slate-900") 
+    : (isDarkMode ? "text-[#ADB7BE]" : "text-slate-500");
 
   return (
     <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+      <p className={`mr-3 font-semibold ${buttonClasses} ${
+        isDarkMode ? 'hover:text-white' : 'hover:text-slate-700'
+      }`}>
         {children}
       </p>
       <motion.div

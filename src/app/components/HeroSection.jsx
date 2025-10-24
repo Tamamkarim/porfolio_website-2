@@ -4,8 +4,11 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTheme } from "../contexts/ThemeContext";
 
 const HeroSection = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -15,8 +18,14 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+          <h1 className={`mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold transition-colors duration-300 ${
+            isDarkMode ? 'text-white' : 'text-slate-900'
+          }`}>
+            <span className={`text-transparent bg-clip-text transition-all duration-300 ${
+              isDarkMode 
+                ? 'bg-gradient-to-r from-primary-400 to-secondary-600' 
+                : 'bg-gradient-to-r from-indigo-600 to-purple-600'
+            }`}>
               Hello, I&apos;m{" "}
             </span>
             <br></br>
@@ -36,7 +45,9 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className={`text-base sm:text-lg mb-6 lg:text-xl transition-colors duration-300 ${
+            isDarkMode ? 'text-[#ADB7BE]' : 'text-slate-600'
+          }`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
           </p>

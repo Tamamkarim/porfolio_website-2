@@ -1,8 +1,11 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useTheme } from "../contexts/ThemeContext";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <div>
       <div
@@ -24,9 +27,13 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+      <div className={`rounded-b-xl mt-3 py-6 px-4 ${
+        isDarkMode 
+          ? 'text-white bg-[#181818]' 
+          : 'text-slate-900 bg-white border border-slate-200'
+      }`}>
+        <h5 className={`text-xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>{title}</h5>
+        <p className={isDarkMode ? "text-[#ADB7BE]" : "text-slate-600"}>{description}</p>
       </div>
     </div>
   );

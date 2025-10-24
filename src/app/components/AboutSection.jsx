@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { useTheme } from "../contexts/ThemeContext";
 
 const TAB_DATA = [
   {
@@ -9,12 +10,12 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>MangoDB & Docker</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>React.js, Next.js, JavaScript</li>
+        <li>Python, HTML, CSS</li>
+        <li>Back-end ja Front-end kehitys</li>
+        <li>Versionhallinta (GitHub)</li>
+        <li>RESTful API -kehitys</li>
+       
       </ul>
     ),
   },
@@ -41,6 +42,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
+  const { isDarkMode } = useTheme();
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
 
@@ -51,7 +53,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className={isDarkMode ? "text-white" : "text-slate-900"} id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image 
           src="/images/about-image.png" 
@@ -60,8 +62,8 @@ const AboutSection = () => {
           alt="Picture of me working" 
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <h2 className={`text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>About Me</h2>
+          <p className={`text-base lg:text-lg ${isDarkMode ? 'text-gray-300' : 'text-slate-600'}`}>
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
@@ -92,7 +94,7 @@ const AboutSection = () => {
               Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className={`mt-8 ${isDarkMode ? 'text-gray-300' : 'text-slate-600'}`}>
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
