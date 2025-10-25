@@ -59,12 +59,12 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="https://www.canva.com/design/DAFqx9YjYGI/y43dEXznph0vFzr8-TajTQ/view?utm_content=DAFqx9YjYGI&utm_campaign=designshare&utm_medium=link&utm_source=editor
+              href="https://www.canva.com/design/DAG2uQX3kOA/WKr4pD_Wyq8JtQzM249mxg/edit
 "
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                My CV
               </span>
             </Link>
           </div>

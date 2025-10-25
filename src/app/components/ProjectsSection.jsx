@@ -9,7 +9,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "A personal portfolio website built using React. Showcases projects, skills, and experiences with a responsive design and smooth animations.",
+    description: "",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Tamamkarim/porfolio_website-2",
@@ -18,17 +18,17 @@ const projectsData = [
   {
     id: 2,
     title: "Apricus - Kahvila & Ravintola",
-    description: "Modern web application for restaurant management with customer service and advanced admin tools. Features responsive design, shopping cart system, authentication, and menu management.",
-    image: "/images/projects/2.png",
+    description: "",
+    image: "/images/projects/Ravintaloa.Kahvila.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Tamamkarim/apricus-restaurant",
+    gitUrl: "https://github.com/Tamamkarim/projakti-web-Ravintolakonsepti#",
     previewUrl: "/",
   },
   {
     id: 3, 
     title: "Booking",
     description:
-      "A task management application built with React and TypeScript. This project demonstrates state management, custom hooks, and a clean component structure.",
+      "",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Tamamkarim/SAS-2.0-N",
@@ -37,7 +37,7 @@ const projectsData = [
   {
     id: 4,
     title: "E-commerce Application",
-    description: "An e-commerce application that allows users to browse products, add items to their cart, and proceed to checkout. Built with React, it incorporates features like dynamic product listings, responsive design, and state management using strapi.",
+   
     image: "/images/projects/4.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Tamamkarim/my-app",
@@ -46,12 +46,13 @@ const projectsData = [
   {
     id: 5,
     title: "DIVs_website",
-    description: "A responsive website for DIVs Company showcasing services, portfolio, and client testimonials. Built with modern web technologies to provide a user-friendly experience.",
+    description: "",
     image: "/images/projects/5.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/DIVSCompany/DIVs_website",
     previewUrl: "/",
   },
+   
   {
     id: 6,
     title: "React Template",
@@ -63,8 +64,8 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Full-stack",
-    description: "Project 6 description",
+    title: "Lokkit_web",
+    description: "Project ",
     image: "/images/projects/7.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Tamamkarim/Dockre",
@@ -72,11 +73,29 @@ const projectsData = [
   },
   {
     id: 8,
-    title: " Lokkit_web",
-    description: "Lokkit_web is a dynamic web application designed to manage and organize various business services. Built using modern web technologies, this project demonstrates a seamless user experience with real-time data handling and interactive UI components.",
-    image: "/images/projects/8.png",
+    title: " Ravintola",
+    description: "",
+    image: "/images/projects/Raventaloa2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Tamamkarim/Lokkit-website-main",
+    gitUrl: "https://github.com/Tamamkarim/Food-TK",
+    previewUrl: "/",
+  },
+    {
+    id: 9,
+    title: " Game",
+    description: "",
+    image: "/images/projects/99.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Tamamkarim/proikti_game",
+    previewUrl: "/",
+  },
+   {
+    id: 10,
+    title: " Game",
+    description: "",
+    image: "/images/projects/10.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/ville5367/ohjelmisto-2#",
     previewUrl: "/",
   },
 ];
